@@ -20,7 +20,7 @@ struct Cli {
 enum Command {
     /// Open the local item mod builder.
     Serve {
-        #[arg(long, default_value = "../items/dist/catalogue")]
+        #[arg(long, env = "GHOSTLINE_ITEMS_CATALOGUE", default_value = "catalogue")]
         catalogue: PathBuf,
         #[arg(long, default_value = "work/projects")]
         projects: PathBuf,
@@ -33,7 +33,7 @@ enum Command {
     },
     /// Validate and package an authored project without the browser.
     Export {
-        #[arg(long, default_value = "../items/dist/catalogue")]
+        #[arg(long, env = "GHOSTLINE_ITEMS_CATALOGUE", default_value = "catalogue")]
         catalogue: PathBuf,
         #[arg(long)]
         project: PathBuf,

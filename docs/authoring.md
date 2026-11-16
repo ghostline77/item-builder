@@ -4,7 +4,7 @@
 
 ```powershell
 cargo build --release --locked
-cargo run --release --locked -- serve --catalogue ../items/dist/catalogue
+cargo run --release --locked -- serve --catalogue path/to/items-catalogue
 ```
 
 Open the local URL printed at startup. By default the OS assigns a free port;
@@ -17,7 +17,7 @@ directory. Reflection metadata is automatic; `--schema` is an optional advanced
 override. Without the game, browsing retains catalogue images:
 
 ```powershell
-cargo run --release --locked -- serve --catalogue ../items/dist/catalogue --game 'path/to/Cyberpunk 2077'
+cargo run --release --locked -- serve --catalogue path/to/items-catalogue --game 'path/to/Cyberpunk 2077'
 ```
 
 In Appearance, choose **Edit custom colours**, select a masked material layer,
@@ -83,7 +83,7 @@ the resulting edits. Export always validates the submitted project again.
 CLI export uses the same compiler:
 
 ```powershell
-cargo run --release --locked -- export --catalogue ../items/dist/catalogue --project my-weapon.item.json --out my-weapon.zip
+cargo run --release --locked -- export --catalogue path/to/items-catalogue --project my-weapon.item.json --out my-weapon.zip
 ```
 
 ## Supported behaviour

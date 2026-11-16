@@ -5,14 +5,11 @@ edit performance and colours, review the generated changes and export a mod.
 
 ## Start the editor
 
-Use Rust and a published sibling Items catalogue. Keep the sibling native crates
-declared in [Cargo.toml](Cargo.toml) available. Install the parent
-`ghostline77` JavaScript workspace with `npm ci` before a fresh build.
-Run from this repository:
+Install Rust 1.92+, Node.js 20+ and GitHub access to the Ghostline dependencies. Run from this repository.
 
 ```powershell
 cargo build --release --locked
-cargo run --release --locked -- serve --catalogue ../items/dist/catalogue
+cargo run --release --locked -- serve --catalogue path/to/items-catalogue
 ```
 
 Open the URL printed at startup. The OS chooses a free port; `--port 8795`
